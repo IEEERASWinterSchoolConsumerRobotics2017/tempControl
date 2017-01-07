@@ -1,0 +1,33 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+ninja_required_version = 1.5
+include rules.ninja
+include target.ninja
+
+shell = cmd /c
+bashshell = C:\tizen-studio\tools\msys2\usr\bin\sh.exe
+builddir = ..\Debug
+sareportdir = ..\SA_Report
+sa_checkers = alpha,cplusplus,core,deadcode,resourceLeak,security,unix
+coveragedir = ..\Coverage_Report
+
+subninja ../Debug/src/subdir.ninja
+subninja ../Debug/src/event_handler/subdir.ninja
+subninja ../Debug/src/managed/src/connection/subdir.ninja
+subninja ../Debug/src/managed/src/manager/subdir.ninja
+subninja ../Debug/src/managed/src/utils/subdir.ninja
+subninja ../Debug/src/managed/src/view/subdir.ninja
+
+targettool = clang++.exe
+targetflags =  -L"..\lib" -target i386-tizen-linux-gnueabi -gcc-toolchain "C:\tizen-studio\tools\smart-build-interface/../i386-linux-gnueabi-gcc-4.6/" -ccc-gcc-name i386-linux-gnueabi-g++ -march=i386 -Xlinker --as-needed  -pie -lpthread --sysroot="C:/tizen-studio/tools/smart-build-interface/../../platforms/tizen-2.3.2/wearable\rootstraps/wearable-2.3.2-emulator.core" -Xlinker --version-script="../.exportMap" -L"C:/tizen-studio/tools/smart-build-interface/../../platforms/tizen-2.3.2/wearable\rootstraps/wearable-2.3.2-emulator.core/usr/lib" -lBrokenLocale -lanl -lappcore-agent -lappcore-watch -lbadge -lbase-utils-i18n -lbundle -lcairo -lcapi-appfw-alarm -lcapi-appfw-app-common -lcapi-appfw-app-control -lcapi-appfw-application -lcapi-appfw-app-manager -lcapi-appfw-package-manager -lcapi-appfw-preference -lcapi-appfw-widget-application -lcapi-base-common -lcapi-content-media-content -lcapi-content-mime-type -lcapi-data-control -lcapi-location-manager -lcapi-maps-service -lcapi-media-audio-io -lcapi-media-camera -lcapi-media-codec -lcapi-media-image-util -lcapi-media-metadata-extractor -lcapi-media-player -lcapi-media-radio -lcapi-media-recorder -lcapi-media-sound-manager -lcapi-media-tone-player -lcapi-media-tool -lcapi-media-wav-player -lcapi-message-port -lcapi-messaging-messages -lcapi-network-bluetooth -lcapi-network-connection -lcapi-network-nfc -lcapi-network-smartcard -lcapi-network-wifi -lcapi-system-device -lcapi-system-info -lcapi-system-media-key -lcapi-system-runtime-info -lcapi-system-sensor -lcapi-system-system-settings -lcapi-telephony -lcapi-ui-efl-util -lcidn -lcore-context-manager -lcrypto -lcrypt -lc -lcurl -ldlog -ldl -lecore_con -lecore_evas -lecore_fb -lecore_file -lecore_imf_evas -lecore_imf -lecore_input_evas -lecore_input -lecore_ipc -lecore -lecore_x -ledbus -ledje -leet -lefl-extension -lefreet_mime -lefreet -lefreet_trash -leina -leio -lelementary -lembryo -lethumb_client -lethumb -levas -lewebkit2 -lexif -lfontconfig -lfreetype -lgio-2.0 -lglib-2.0 -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -ljson-glib-1.0 -lkey-manager-client -lminizip -lm -lnotification -lnsl -lnss_compat -lnss_dns -lnss_files -lnss_hesiod -lnss_nisplus -lnss_nis -loauth -lopenal -lprivilege-info -lpthread -lpush -lresolv -lrt -lsqlite3 -lssl -lstorage -lstt -ltbm -lthread_db -ltts -lutil -lwidget_service -lwidget_viewer_evas -lxml2 -lz -Xlinker -rpath="//opt/usr/apps/org.example.buildertest/lib" -Werror-implicit-function-declaration
+
+build buildertest: build_target src/app_main.o src/buildertest.o src/getSetFunctions.o src/event_handler/uib_view1_event_handler.o src/managed/src/connection/uib_view1_connection.o src/managed/src/manager/uib_app_manager.o src/managed/src/manager/uib_view_manager.o src/managed/src/utils/uib_util.o src/managed/src/view/uib_view1_view.o src/managed/src/view/uib_views.o 
+build ast: phony src/app_main.o.ast src/buildertest.o.ast src/getSetFunctions.o.ast src/event_handler/uib_view1_event_handler.o.ast src/managed/src/connection/uib_view1_connection.o.ast src/managed/src/manager/uib_app_manager.o.ast src/managed/src/manager/uib_view_manager.o.ast src/managed/src/utils/uib_util.o.ast src/managed/src/view/uib_view1_view.o.ast src/managed/src/view/uib_views.o.ast
+build fn: phony src/app_main.o.fn src/buildertest.o.fn src/getSetFunctions.o.fn src/event_handler/uib_view1_event_handler.o.fn src/managed/src/connection/uib_view1_connection.o.fn src/managed/src/manager/uib_app_manager.o.fn src/managed/src/manager/uib_view_manager.o.fn src/managed/src/utils/uib_util.o.fn src/managed/src/view/uib_view1_view.o.fn src/managed/src/view/uib_views.o.fn
+build extfn: ext_fn src/app_main.o.fn src/buildertest.o.fn src/getSetFunctions.o.fn src/event_handler/uib_view1_event_handler.o.fn src/managed/src/connection/uib_view1_connection.o.fn src/managed/src/manager/uib_app_manager.o.fn src/managed/src/manager/uib_view_manager.o.fn src/managed/src/utils/uib_util.o.fn src/managed/src/view/uib_view1_view.o.fn src/managed/src/view/uib_views.o.fn | clean_sa ast
+build sa: phony src/app_main.o.sa src/buildertest.o.sa src/getSetFunctions.o.sa src/event_handler/uib_view1_event_handler.o.sa src/managed/src/connection/uib_view1_connection.o.sa src/managed/src/manager/uib_app_manager.o.sa src/managed/src/manager/uib_view_manager.o.sa src/managed/src/utils/uib_util.o.sa src/managed/src/view/uib_view1_view.o.sa src/managed/src/view/uib_views.o.sa
+build apichecker: unusedapi_rule src/app_main.o.txt src/buildertest.o.txt src/getSetFunctions.o.txt src/event_handler/uib_view1_event_handler.o.txt src/managed/src/connection/uib_view1_connection.o.txt src/managed/src/manager/uib_app_manager.o.txt src/managed/src/manager/uib_view_manager.o.txt src/managed/src/utils/uib_util.o.txt src/managed/src/view/uib_view1_view.o.txt src/managed/src/view/uib_views.o.txt
+build coverage: cov_report $coveragedir/src/app_main.o.cov $coveragedir/src/buildertest.o.cov $coveragedir/src/getSetFunctions.o.cov $coveragedir/src/event_handler/uib_view1_event_handler.o.cov $coveragedir/src/managed/src/connection/uib_view1_connection.o.cov $coveragedir/src/managed/src/manager/uib_app_manager.o.cov $coveragedir/src/managed/src/manager/uib_view_manager.o.cov $coveragedir/src/managed/src/utils/uib_util.o.cov $coveragedir/src/managed/src/view/uib_view1_view.o.cov $coveragedir/src/managed/src/view/uib_views.o.cov
+
